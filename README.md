@@ -1,1 +1,2 @@
-# Auctioncw3
+# auctionapp
+Web Programming Coursework 3

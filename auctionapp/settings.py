@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = 'login'
+LOGIN_REDIREDT_URL = 'accounts/profile/profilepage'
+LOGOUT_REDIRECT_URL = 'frontpage'
+
+
 
 # Application definition
 

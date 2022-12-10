@@ -6,6 +6,7 @@ from .models import User
 
 from .forms import CreateUserForm
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 
 
 @csrf_exempt 
@@ -27,20 +28,12 @@ def signup(request):
 def frontpage(request):
     return render(request, 'mainapp/frontpage.html')
 
+@csrf_exempt 
 def login(request):
     context = {}
     return render(request, 'mainapp/login.html', context)
 
+@login_required
 @csrf_exempt 
-def register(request):
-    form = CreateUserForm()
-
-    if request.method == 'POST':
-        form = CreateUserForm(request.POST)
-        if form.is_valid():
-            form.save()
-
-
-
-    context = {'form':form}
-    return render(request, 'mainapp/register.html', context)
+def profilepage(request):
+    return render(request, 'mainapp/profilepage.html')

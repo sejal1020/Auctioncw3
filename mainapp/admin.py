@@ -4,8 +4,6 @@ from django.contrib import admin
 
 #from django.contrib.auth.admin import User
 from .models import User
-
-
 from .models import Item
 from .models import QandA
 from .models import Bids

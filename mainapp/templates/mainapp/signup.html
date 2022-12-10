@@ -1,0 +1,15 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+
+<div>
+    <h3>REGISTER ACCOUNT</h3>
+     <div>
+        <form method="POST" action=".">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="button is-success" type="submit"> Sign Up</button>
+            
+            
+                
+{% endblock %}
